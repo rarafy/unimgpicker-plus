@@ -85,8 +85,20 @@ namespace Kakera
 
 <br>
 
-## 動作環境
-| TH1 | TH2 | TH3 |
+## 動作保証環境
+プログラムは下記環境で開発されています。（必ずしも最低動作環境を表すものではありません）
+| Platform | OS | IDE |
 ----|----|---- 
-| TD1 | TD3 | TD5 |
-| TD2 | TD4 | TD6 |
+| iOS | 13.3 | Xcode 11.6 |
+| Android | 10.0 (API 29) | Android Studio 4.0.1 |
+| Windows | 10 (20H2) | Visual Studio 2019 16.11.2 |
+
+<br>
+
+## ビルド
+このパッケージはUnimgpickerを開発する際に使ったAndroidプロジェクトを同梱しています。
+改変して使用したい場合にご利用ください。
+```
+$ unimgpicker_android
+$ ./gradlew unityLibrary:Unimgpicker:exportJar
+```
