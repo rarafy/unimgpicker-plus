@@ -1,10 +1,10 @@
-# unimgpicker
+# unimgpicker-plus
 Image picker for Unity iOS/Android/Windows
 - ReadMe(English)
 - [ReadMe(日本語)](README_JP.md)
 
-![unimgpicker_ios](doc/unimgpicker_ios.gif)
-![unimgpicker_android](doc/unimgpicker_android.gif)
+![unimgpicker_ios](https://user-images.githubusercontent.com/33755507/131531387-67f5d05a-5fd8-423f-b5c7-2beea1630b33.png)
+![unimgpicker_android](https://user-images.githubusercontent.com/33755507/131531449-8df9796c-3fee-4ce8-98a4-883d727d35c2.png)
 
 ## Getting Started
 
@@ -90,3 +90,9 @@ You can make changes to the code and build your own jar.
 $ unimgpicker_android
 $ ./gradlew unityLibrary:Unimgpicker:exportJar
 ```
+
+<br>
+
+## Special Thanks
+We would like to thank @thedoritos for developing the original project and supervising this repository.<br>
+・[The original project：unimgpicker](https://github.com/thedoritos/unimgpicker)
