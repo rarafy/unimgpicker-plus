@@ -90,3 +90,8 @@ You can make changes to the code and build your own jar.
 $ unimgpicker_android
 $ ./gradlew unityLibrary:Unimgpicker:exportJar
 ```
+
+
+## Special Thanks
+We would like to thank @thedoritos for developing the original project and supervising this repository.<br>
+・[The original project：unimgpicker](https://github.com/thedoritos/unimgpicker)
