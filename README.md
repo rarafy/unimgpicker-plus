@@ -6,6 +6,13 @@ Image picker for Unity iOS/Android/Windows
 ![unimgpicker_ios](doc/unimgpicker_ios.gif)
 ![unimgpicker_android](doc/unimgpicker_android.gif)
 
+## Difference from [original unimgpicker](https://github.com/thedoritos/unimgpicker)
+There are a number of minor changes, but the following two points are the most significant differences.
+- Native image compression support (iOS, Android)
+- Support for Windows
+
+<br>
+
 ## Getting Started
 
 Import `unimgpicker.unitypackage` into your project.
