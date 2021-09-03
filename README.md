@@ -1,4 +1,4 @@
-# unimgpicker
+# unimgpicker-plus
 Image picker for Unity iOS/Android/Windows
 - ReadMe(English)
 - [ReadMe(日本語)](README_JP.md)
