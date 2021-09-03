@@ -1,5 +1,5 @@
 # unimgpicker-plus
-Unityで使えるImage picker iOS/Android/Windowsです。
+Unityで使えるImage pickerです。iOS/Android/Windowsに対応しています。
 - [ReadMe(English)](README.md)
 - ReadMe(日本語)
 
