@@ -8,6 +8,13 @@ Unityで使えるImage pickerです。iOS/Android/Windowsに対応していま�
 
 <br>
 
+## [本家unimgpicker](https://github.com/thedoritos/unimgpicker)との差異
+細かい変更はいくつかありますが、以下の２点が最も大きな違いとなっています。
+- ネイティブによる画像圧縮をサポート（iOS, Android）
+- Windowsに対応
+
+<br>
+
 ## 使い方（Picker-plus）
 1. ```unimgpicker.unitypackage```をUnityのプロジェクトにインポートします。<br>
 ![image](https://user-images.githubusercontent.com/33755507/131508711-7efb16f2-d453-4e92-acf7-a35ebe7943fa.png)
