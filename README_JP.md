@@ -106,3 +106,9 @@ namespace Kakera
 $ unimgpicker_android
 $ ./gradlew unityLibrary:Unimgpicker:exportJar
 ```
+
+<br>
+
+## 謝辞
+元のプロジェクトを開発し、当リポジトリを監修頂いた、@thedoritos様にお礼申し上げます。<br>
+・[フォーク元のプロジェクト：unimgpicker](https://github.com/thedoritos/unimgpicker)
