@@ -91,6 +91,7 @@ $ unimgpicker_android
 $ ./gradlew unityLibrary:Unimgpicker:exportJar
 ```
 
+<br>
 
 ## Special Thanks
 We would like to thank @thedoritos for developing the original project and supervising this repository.<br>
