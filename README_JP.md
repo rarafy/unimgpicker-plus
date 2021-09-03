@@ -3,8 +3,8 @@ Unityで使えるImage picker iOS/Android/Windowsです。
 - [ReadMe(English)](README.md)
 - ReadMe(日本語)
 
-![unimgpicker_ios](doc/unimgpicker_ios.gif)
-![unimgpicker_android](doc/unimgpicker_android.gif)
+![unimgpicker_ios](https://user-images.githubusercontent.com/33755507/131531387-67f5d05a-5fd8-423f-b5c7-2beea1630b33.png)
+![unimgpicker_android](https://user-images.githubusercontent.com/33755507/131531449-8df9796c-3fee-4ce8-98a4-883d727d35c2.png)
 
 <br>
 
