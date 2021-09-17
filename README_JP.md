@@ -35,6 +35,9 @@ Use the image to create your profile.
 4. ButtonにAddImageを加え、次のようにSS ImageをInspectorから設定します。<br>
 ![image](https://user-images.githubusercontent.com/33755507/131512416-420a2d43-c3be-4698-a39e-5af84738bf81.png)<br>
 AddImage.csの```Texture(Texture2D), Texture2(Sprite)```に対して参照をかけることで画像を得ることが出来ます。
+<br>
+
+5. AddImageのOnPressedShowPickerをButtonのOnClickイベントに登録します。
 
 <br>
 
