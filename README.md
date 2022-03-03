@@ -1,3 +1,15 @@
+![](https://img.shields.io/badge/openupm-x-red)
+![](https://img.shields.io/github/v/release/rarafy/unimgpicker-plus?include_prereleases)
+![](https://img.shields.io/github/release-date/rarafy/unimgpicker-plus)
+![](https://img.shields.io/github/license/rarafy/unimgpicker-plus)
+![](https://img.shields.io/badge/PRs-welcome-orange)
+![](https://img.shields.io/badge/Unity%202018.3%20or%20later.x-supported-blue)
+![](https://img.shields.io/badge/Unity%202019.x-supported-blue)
+![](https://img.shields.io/badge/Unity%202020.x-supported-blue)
+![](https://img.shields.io/github/issues-closed/rarafy/unimgpicker-plus)
+![](https://img.shields.io/github/downloads/rarafy/unimgpicker-plus/total)
+![](https://img.shields.io/github/repo-size/rarafy/unimgpicker-plus)
+
 # unimgpicker-plus
 Image picker for Unity iOS / Android / StandAlone (Windows, Intel Mac, Linux)
 - ReadMe(English)
