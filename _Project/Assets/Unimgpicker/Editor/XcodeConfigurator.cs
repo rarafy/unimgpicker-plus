@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using UnityEditor;
 using UnityEditor.Callbacks;
+#if UNITY_IOS
 using UnityEditor.iOS.Xcode;
+#endif
 using System.Diagnostics;
 using System.IO;
 using Debug = UnityEngine.Debug;
@@ -21,7 +23,8 @@ namespace Kakera.Unimgpicker
 
         static void ConfigurePlist(string buildPath, string plistPath)
         {
-            var plist = new PlistDocument();
+#if UNITY_IOS
+      var plist = new PlistDocument();      
             var path = Path.Combine(buildPath, plistPath);
 
             plist.ReadFromFile(path);
@@ -39,6 +42,7 @@ namespace Kakera.Unimgpicker
             Debug.Log(string.Format("[Unimgpicker]:Set NSPhotoLibraryUsageDescription as \"{0}\"", description));
 
             plist.WriteToFile(path);
+#endif
         }
     }
 }

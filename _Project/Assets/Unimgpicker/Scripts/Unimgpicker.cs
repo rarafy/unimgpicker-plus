@@ -14,14 +14,14 @@ namespace Kakera
         public event ErrorDelegate Failed;
 
         private IPicker picker =
-#if UNITY_IOS && !UNITY_EDITOR
-            new PickeriOS();
-#elif UNITY_ANDROID && !UNITY_EDITOR
-            new PickerAndroid();
-#elif UNITY_EDITOR_OSX || UNITY_EDITOR_WIN
+#if UNITY_EDITOR
             new Picker_editor();
-#elif UNITY_STANDALONE_WIN
-            new PickerWindows();
+#elif UNITY_IOS
+            new PickeriOS();
+#elif UNITY_ANDROID
+            new PickerAndroid();
+#elif UNITY_STANDALONE
+        new PickerStandalone();
 #else
             new PickerUnsupported();
 #endif
