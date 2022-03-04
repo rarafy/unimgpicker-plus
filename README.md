@@ -6,6 +6,7 @@
 ![](https://img.shields.io/badge/Unity%202018.3%20or%20later.x-supported-blue)
 ![](https://img.shields.io/badge/Unity%202019.x-supported-blue)
 ![](https://img.shields.io/badge/Unity%202020.x-supported-blue)
+![](https://img.shields.io/github/issues/rarafy/unimgpicker-plus)
 ![](https://img.shields.io/github/issues-closed/rarafy/unimgpicker-plus)
 ![](https://img.shields.io/github/downloads/rarafy/unimgpicker-plus/total)
 ![](https://img.shields.io/github/repo-size/rarafy/unimgpicker-plus)
