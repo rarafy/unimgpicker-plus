@@ -12,7 +12,7 @@
 ![](https://img.shields.io/github/repo-size/rarafy/unimgpicker-plus)
 
 # unimgpicker-plus
-Image picker for Unity iOS / Android / StandAlone (Windows, Intel Mac, Linux)
+Image picker for Unity iOS / Android / StandAlone (Windows, Intel Mac, Linux) / WebGL
 - ReadMe(English)
 - [ReadMe(日本語)](README_JP.md)
 
@@ -22,7 +22,7 @@ Image picker for Unity iOS / Android / StandAlone (Windows, Intel Mac, Linux)
 ## Difference from [original unimgpicker](https://github.com/thedoritos/unimgpicker)
 There are a number of minor changes, but the following two points are the most significant differences.
 - Native image compression support (iOS, Android)
-- Support for Windows, Mac(Intel), Linux
+- Support for Windows, Mac(Intel), Linux, WebGL
 
 <br>
 
