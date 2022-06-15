@@ -18,6 +18,7 @@ Image picker for Unity iOS / Android / StandAlone (Windows, Intel Mac, Linux) / 
 
 ![unimgpicker_ios](doc/unimgpicker_ios.gif)
 ![unimgpicker_android](doc/unimgpicker_android.gif)
+![unimgpicker_webgl](doc/unimgpicker_webgl.png)
 
 ## Difference from [original unimgpicker](https://github.com/thedoritos/unimgpicker)
 There are a number of minor changes, but the following two points are the most significant differences.
