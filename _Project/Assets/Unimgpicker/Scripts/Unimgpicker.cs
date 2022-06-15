@@ -21,7 +21,7 @@ namespace Kakera
 #elif UNITY_ANDROID
             new PickerAndroid();
 #elif UNITY_STANDALONE
-        new PickerStandalone();
+            new PickerStandalone();
 #else
             new PickerUnsupported();
 #endif

@@ -1,20 +1,18 @@
-using Kakera;
+﻿using Kakera;
 using System;
 using System.Collections;
+using System.Runtime.InteropServices;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class AddImage : MonoBehaviour
+// WebGLで使うときはIPointerDownHandlerを継承する必要がある点に注意
+public class AddImage : MonoBehaviour, IPointerDownHandler
 {
     [SerializeField] private Unimgpicker imagePicker;
     [SerializeField] private Image ssImage;
     public Texture2D texture;
     public Sprite texture2;
-
-    private void Awake()
-    {
-        imagePicker.Completed += path => StartCoroutine(LoadImage(path, ssImage));
-    }
 
     private void Start()
     {
@@ -24,9 +22,15 @@ public class AddImage : MonoBehaviour
         }
     }
 
+#if !UNITY_WEBGL
+    private void Awake()
+    {
+        imagePicker.Completed += path => StartCoroutine(LoadImage(path, ssImage));
+    }
+
     public void OnPressShowPicker()
     {
-        imagePicker.Show("Select Image", "unimgpicker", 512);//1024��512�ɕύX
+        imagePicker.Show("Select Image", "unimgpicker", 512);//1024→512に変更
     }
 
     private IEnumerator LoadImage(string path, Image output)
@@ -36,22 +40,58 @@ public class AddImage : MonoBehaviour
         yield return www;
 
         texture = www.texture;
-        // �܂����T�C�Y
+        // まずリサイズ
         int _CompressRate = TextureCompressionRate.TextureCompressionRatio(texture.width, texture.height);
         TextureScale.Bilinear(texture, texture.width / _CompressRate, texture.height / _CompressRate);
-        // ���Ɉ��k(�c���E����������Ǝg���Ȃ��ꍇ������悤�ł��B) -> https://forum.unity.com/threads/strange-error-message-miplevel-m_mipcount.441907/
+        // 次に圧縮(縦長・横長すぎると使えない場合があるようです。) -> https://forum.unity.com/threads/strange-error-message-miplevel-m_mipcount.441907/
         //texture.Compress(false);
-        // Sprite�ɕϊ����Ďg�p����
+        // Spriteに変換して使用する
         texture2 = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
         output.overrideSprite = texture2;
     }
+
+    // WebGLを使わない場合はこの関数(OnPointerDown)は不要
+    public void OnPointerDown(PointerEventData eventData) { }
+
+#elif UNITY_WEBGL
+    [DllImport("__Internal")]
+    private static extern void UploadFile(string gameObjectName, string methodName, string filter, bool multiple);
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        UploadFile(gameObject.name, "OnFileUpload", ".png, .PNG, .jpg, .jpeg", false);
+    }
+
+    // Called from browser
+    public void OnFileUpload(string url)
+    {
+        StartCoroutine(OutputRoutine(url));
+    }
+
+
+    private IEnumerator OutputRoutine(string url)
+    {
+        var www = new WWW(url);
+        yield return www;
+
+        texture = www.texture;
+        // まずリサイズ
+        int _CompressRate = TextureCompressionRate.TextureCompressionRatio(texture.width, texture.height);
+        TextureScale.Bilinear(texture, texture.width / _CompressRate, texture.height / _CompressRate);
+        // 次に圧縮(縦長・横長すぎると使えない場合があるようです。) -> https://forum.unity.com/threads/strange-error-message-miplevel-m_mipcount.441907/
+        //texture.Compress(false);
+        // Spriteに変換して使用する
+        texture2 = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
+        ssImage.overrideSprite = texture2;
+    }
+#endif
 }
 
 
 public static class TextureCompressionRate
 {
     /// <summary>
-    /// Texture��500x500�Ɏ��܂�悤�Ƀ��T�C�Y���܂�
+    /// Textureが500x500に収まるようにリサイズします
     /// </summary>
     public static int TextureCompressionRatio(int width, int height)
     {
