@@ -5,6 +5,7 @@ Unityで使えるImage pickerです。iOS / Android / StandAlone (Windows, Mac I
 
 ![unimgpicker_ios](doc/unimgpicker_ios.gif)
 ![unimgpicker_android](doc/unimgpicker_android.gif)
+![unimgpicker_webgl](doc/unimgpicker_webgl.png)
 
 <br>
 
