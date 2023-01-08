@@ -92,7 +92,7 @@ namespace Kakera
 ```
 
 **If you want to use it with WebGL, see the [Japanese documentation](README_JP.md).**
-(English translators for ReadMe_JP.md to ReadMe.md are wanted.)
+(WANTED: English translators who translates ReadMe_JP.md to ReadMe.md.)
 
 <br>
 
