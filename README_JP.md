@@ -12,7 +12,7 @@ Unityで使えるImage pickerです。iOS / Android / StandAlone (Windows, Mac I
 ## [本家unimgpicker](https://github.com/thedoritos/unimgpicker)との差異
 細かい変更はいくつかありますが、以下の２点が最も大きな違いとなっています。
 - ネイティブによる画像圧縮をサポート（iOS, Android）
-- Windows / Mac(Intel) / Linux / WebGL に対応
+- モバイルに加え、Windows / Mac(Intel) / Linux / WebGL にも対応
 
 <br>
 
